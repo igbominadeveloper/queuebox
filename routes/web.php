@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['page'=>'Homepage']);
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/clippings','NewspaperController');
+Route::resource('/tweets','TwitterController');
+Route::resource('/posts','PostController');
+Route::resource('/videos','VideoController');

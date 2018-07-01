@@ -1,4 +1,32 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
+nav.side-navbar{
+  position: fixed !important;
+  height: 100% !important;
+  margin-top: 66px !important;
+}
+
+header.header{
+  position: fixed !important;
+  width: 100% !important;
+  z-index: 100 !important;
+}
+
+.ml-266{
+  margin-left: 266px !important;
+}
+.mr-266{
+  margin-right: 266px !important;
+}
+
+button#add{
+  margin-bottom:17px !important;
+}
+.font-size-30{
+  font-size: 30px !important;
+}
+
+.SandBoxRoot{
+  width:100% !important;
+}

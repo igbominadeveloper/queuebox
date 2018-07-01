@@ -1,8 +1,13 @@
 require('./bootstrap');
 
-import router from './routes';
+window.onload(
+    setTimeout(() => {
+        let flash = document.querySelector(".alert");
+        flash.style.display = 'none';
+    }, 5000)
+);
 
-new Vue({
-    el: '#app',
-    router
-});
+// new Vue({
+//     el: '#app'
+// });
+
