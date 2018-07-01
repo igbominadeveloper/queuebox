@@ -30,3 +30,13 @@ button#add {
   width: 100% !important;
 }
 
+.pagination {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.page-link {
+  padding: 15px !important;
+}
+

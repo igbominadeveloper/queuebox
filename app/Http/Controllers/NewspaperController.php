@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Newspaper;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class NewspaperController extends Controller
 {
+
+    public function api(){
+        return Newspaper::latest()->get();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,8 @@ class NewspaperController extends Controller
      */
     public function index()
     {
-        return view('newspapers.index',['page'=>'Clippings']);
+        $newspapers = Newspaper::latest()->paginate(5);
+        return view('newspapers.index',['page'=>'Clippings','newspapers'=>$newspapers]);
     }
 
     /**
@@ -43,8 +50,8 @@ class NewspaperController extends Controller
         ]);
 
         if($request->hasFile('attachment')) {
-            $fileName = $request->title.'.'.$request->attachment->getClientOriginalExtension();
-            $request->attachment->storeAs('clippings', $fileName);
+            $fileName = 'newspaper'.time().'.'.$request->attachment->getClientOriginalExtension();
+            $request->attachment->storeAs('clippings',$fileName);
             $request->attachment = $fileName;
         }
         $newspaper = new Newspaper([

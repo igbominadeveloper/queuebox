@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
+    public function api(){
+        return Video::latest()->get();
+    }
+
     /**
      * Display a listing of the resource.
      *

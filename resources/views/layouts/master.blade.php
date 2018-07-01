@@ -25,11 +25,11 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <script src="js/app.js"></script>
+
     <script src="js/main.js"></script>
 </head>
 <body>
-<div class="page" id="app">
+<div class="page">
     <!-- Main Navbar-->
     <header class="header">
         @include('layouts.topnav')
@@ -62,6 +62,7 @@
 <script src="js/jquery-validation/jquery.validate.min.js"></script>
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
+<script src="js/app.js"></script>
 <script src="js/front.js"></script>
 </body>
 </html>
