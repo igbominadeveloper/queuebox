@@ -40,3 +40,16 @@ button#add {
   padding: 15px !important;
 }
 
+.project .row.bg-white:hover {
+  background-color: gray !important;
+  cursor: pointer !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.project .row.bg-white:hover .text h3,
+.project .row.bg-white:hover small,
+.project .row.bg-white:hover div.time {
+  color: white !important;
+}
+

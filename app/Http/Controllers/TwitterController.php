@@ -55,7 +55,7 @@ class TwitterController extends Controller
      */
     public function show(Twitter $twitter)
     {
-        //
+        return view('twitter.show',['twitter' => $twitter]);
     }
 
     /**

@@ -37,3 +37,13 @@ button#add{
 .page-link{
   padding: 15px !important;
 }
+
+.project .row.bg-white:hover{
+    background-color: gray !important;
+    cursor: pointer !important;
+    color: white !important;
+    text-decoration: none !important;
+    .text h3,small,div.time{
+        color: white !important;
+    }
+}

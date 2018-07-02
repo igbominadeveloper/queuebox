@@ -69,9 +69,9 @@ class NewspaperController extends Controller
      * @param  \App\Newspaper  $newspaper
      * @return \Illuminate\Http\Response
      */
-    public function show(Newspaper $newspaper)
+    public function show($id)
     {
-        //
+        return view('newspapers.show',['newspaper' => Newspaper::find($id),'page' => 'clipping']);
     }
 
     /**

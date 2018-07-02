@@ -12,7 +12,8 @@
             @endif
             <!-- Project-->
             @foreach($newspapers as $newspaper)
-                <div class="project">
+            <a href="/clippings/{{$newspaper->id}}" class="w-100">
+            <div class="project">
                 <div class="row bg-white has-shadow">
                     <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
                         <div class="project-title d-flex align-items-center">
@@ -25,15 +26,10 @@
                     </div>
                     <div class="right-col col-lg-6 d-flex align-items-center">
                         <div class="time"><i class="fa fa-clock-o"></i>{{ $newspaper->created_at->diffForHumans() }} </div>
-                        {{--<div class="comments"><i class="fa fa-comment-o"></i>20</div>--}}
-                        {{--<div class="project-progress">--}}
-                            {{--<div class="progress">--}}
-                                {{--<div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
                     </div>
                 </div>
             </div>
+            </a>
             @endforeach
             {{ $newspapers->links() }}
         </div>
@@ -77,7 +73,7 @@
             var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
             if (file_size > size) {
                 document.getElementById('clip').value = '';
-                alert('Error!!! Image cannot exceed 200kb');
+                alert('Error!!! Image cannot exceed 2MB');
                 return false;
             } else if (!allowedExtensions.exec(file)) {
                 document.getElementById('clip').value = '';
